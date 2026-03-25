@@ -81,6 +81,28 @@ Same five rules, same home IP restriction. Defense in depth.
 | Network Reconnaissance | Nmap 7.94 | T1046 — Network Service Discovery | — |
 | Failed SSH Login Attempts | Manual / sshd | T1110 — Brute Force | 5710 |
 
+---
+
+#### SSH Brute Force
+
+![Hydra brute force command executed against ubuntu-endpoint](screenshots/brute-force/01-hydra-command.png)
+![Wazuh alert fired — brute force attempt detected (Rule 5712)](screenshots/brute-force/02-wazuh-alert.png)
+![Alert document details — failed password attempts](screenshots/brute-force/03-alert-details.png)
+![Alert details — authentication failure fields](screenshots/brute-force/04-alert-details-2.png)
+![MITRE ATT&CK T1110 — Brute Force technique detail](screenshots/brute-force/05-mitre-t1110.png)
+
+#### Network Reconnaissance
+
+![Nmap -sV -sC scan launched against Wazuh server](screenshots/nmap-scan/01-nmap-command.png)
+
+#### Failed SSH Login Attempts
+
+![Wazuh alerts — failed login attempts on ubuntu-endpoint (Rule 5710)](screenshots/failed-login/01-wazuh-alerts.png)
+![Alert document details — sshd non-existent user](screenshots/failed-login/02-alert-details.png)
+![MITRE mapping — T1110.001 Password Guessing, T1021.004 SSH](screenshots/failed-login/03-mitre-mapping.png)
+
+---
+
 ### Windows (Windows 11 Pro VM — `Computer2`)
 
 | Attack | Method | MITRE Technique | Wazuh Rule IDs |
@@ -88,6 +110,32 @@ Same five rules, same home IP restriction. Defense in depth.
 | Login Failures | Manual failed logon attempts | T1110 — Brute Force | 60122 |
 | Audit Log Cleared | Windows Event Log cleared | T1070.001 — Indicator Removal: Clear Windows Event Logs | 63103 |
 | Windows System Errors | Triggered system error events | Windows System Event Monitoring | 61102 |
+
+---
+
+#### Login Failures
+
+![Windows login screen — incorrect password prompt](screenshots/windows-login-failure/05-windows-login-screen.png)
+![Wazuh alerts — logon failures on Computer2 (Rule 60122)](screenshots/windows-login-failure/01-wazuh-alerts.png)
+![Alert document details — Windows event data](screenshots/windows-login-failure/02-alert-details.png)
+![Alert details — authentication fields](screenshots/windows-login-failure/03-alert-details-2.png)
+![Alert details — continued](screenshots/windows-login-failure/04-alert-details-3.png)
+
+#### Audit Log Cleared
+
+![PowerShell — wevtutil cl Security command executed](screenshots/Audit-clean/06-wevtutil-command.png)
+![Wazuh alert — audit log cleared on Computer2 (Rule 63103)](screenshots/Audit-clean/01-wazuh-alert.png)
+![Alert document details](screenshots/Audit-clean/02-alert-details.png)
+![Alert details — event data](screenshots/Audit-clean/03-alert-details-2.png)
+![Alert details — continued](screenshots/Audit-clean/04-alert-details-3.png)
+![Alert details — continued](screenshots/Audit-clean/05-alert-details-4.png)
+
+#### Windows System Errors
+
+![Wazuh alerts — Windows system error events on Computer2 (Rule 61102)](screenshots/windows-sys-error/01-wazuh-alerts.png)
+![Alert document details — TPM driver error](screenshots/windows-sys-error/02-alert-details.png)
+![Alert details — continued](screenshots/windows-sys-error/03-alert-details-2.png)
+![Alert details — continued](screenshots/windows-sys-error/04-alert-details-3.png)
 
 ## Project Structure
 
