@@ -93,8 +93,6 @@ Same five rules, same home IP restriction. Defense in depth.
 
 #### Network Reconnaissance
 
-![Nmap -sV -sC scan launched against Wazuh server](screenshots/nmap-scan/01-nmap-command.png)
-
 #### Failed SSH Login Attempts
 
 ![Wazuh alerts — failed login attempts on ubuntu-endpoint (Rule 5710)](screenshots/failed-login/01-wazuh-alerts.png)
@@ -161,7 +159,8 @@ hybrid-soc-lab/
 │   ├── agent-setup.md                 # Agent enrollment steps
 │   ├── vultr-setup.md                 # Vultr VPS provisioning steps
 │   └── wazuh-install.md               # Wazuh all-in-one installation
-└── WireShark/                         # Packet capture screenshots
+├── WireShark/                         # Packet capture screenshots
+└── SOC_SSH_Brute_Force_Investigation.docx  # SSH brute force investigation report
 ```
 
 ## Key Learnings
@@ -175,3 +174,9 @@ hybrid-soc-lab/
 - Monitored vulnerability detection across severity levels (Critical, High, Medium, Low)
 - Ran CIS Ubuntu 24.04 LTS Benchmark compliance assessment via Wazuh's Security Configuration Assessment module
 - Practiced defense-in-depth with Vultr firewall groups + UFW host-based firewall
+
+## Investigation Reports
+
+| Report | Description |
+|---|---|
+| [SOC SSH Brute Force Investigation](SOC_SSH_Brute_Force_Investigation.docx) | Full investigation report covering the SSH brute force attack simulation — timeline, alert analysis, MITRE ATT&CK mapping, and findings |
