@@ -53,7 +53,7 @@ A cloud-hybrid Security Operations Center (SOC) home lab built with Wazuh 4.14.4
 
 ## Firewall Configuration
 
-Dual-layer firewall architecture — all rules restricted to my home IP only:
+Dual-layer firewall architecture — all rules restricted to home IP only (`YOUR-IP/32`):
 
 ### Layer 1: Vultr Firewall Group (`Wazuh-SOC-Lab`)
 
@@ -94,7 +94,7 @@ hybrid-soc-lab/
 ├── README.md                          # This file
 ├── architecture/
 │   └── diagram.png                    # Lab architecture diagram
-├── attacks/
+├── screenshots/
 │   ├── Audit-clean/                   # Audit log cleared — screenshots & evidence
 │   ├── brute-force/                   # SSH brute force with Hydra
 │   │   └── brute-force.md
