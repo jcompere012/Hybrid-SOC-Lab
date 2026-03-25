@@ -53,7 +53,7 @@ A cloud-hybrid Security Operations Center (SOC) home lab built with Wazuh 4.14.4
 
 ## Firewall Configuration
 
-Dual-layer firewall architecture — all rules restricted to home IP only (`YOUR-IP/32`):
+Dual-layer firewall architecture — all rules restricted to my home IP only:
 
 ### Layer 1: Vultr Firewall Group (`Wazuh-SOC-Lab`)
 
